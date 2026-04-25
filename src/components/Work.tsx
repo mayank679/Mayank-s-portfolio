@@ -18,6 +18,7 @@ const projects = [
       "High test coverage with JUnit + Mockito",
     ],
     link: "https://github.com/mayank679",
+    image: "/images/film_rental.png",
   },
   {
     title: "JARVIS – AI Assistant",
@@ -29,6 +30,7 @@ const projects = [
       "AI chatbot integration",
     ],
     link: "https://jarvis-web-gp4c.onrender.com/",
+    image: "/images/jarvis_ai.png",
   },
   {
     title: "E-Commerce Web App",
@@ -40,6 +42,7 @@ const projects = [
       "Focus on UX and accessibility",
     ],
     link: "https://e-commerce-website-nu-orcin.vercel.app/",
+    image: "/images/ecommerce.png",
   },
 ];
 
@@ -115,7 +118,7 @@ const Work = () => {
                 </div>
               </div>
               <WorkImage
-                image="/images/placeholder.webp"
+                image={project.image}
                 alt={project.title}
                 link={project.link}
               />
