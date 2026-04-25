@@ -74,17 +74,21 @@ a.contact-social {
 @media only screen and (max-width: 900px) {
   .contact-flex {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
   .contact-flex p {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
   .contact-flex h4 {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .contact-section {
-    margin-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 40px;
+    padding-bottom: 60px;
+  }
+  .contact-section h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
   }
   .contact-container {
     width: calc(100% - 25px);

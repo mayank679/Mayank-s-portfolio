@@ -28,7 +28,7 @@ const projects = [
       "File & application control system",
       "AI chatbot integration",
     ],
-    link: "https://github.com/mayank679",
+    link: "https://jarvis-web-gp4c.onrender.com/",
   },
   {
     title: "E-Commerce Web App",
@@ -61,27 +61,29 @@ const Work = () => {
     }
 
     setTranslateX();
+    let mm = gsap.matchMedia();
 
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: `+=${translateX}`,
-        scrub: true,
-        pin: true,
-        id: "work",
-      },
-    });
+    mm.add("(min-width: 769px)", () => {
+      let timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: `+=${translateX}`,
+          scrub: true,
+          pin: true,
+          id: "work",
+        },
+      });
 
-    timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
+      timeline.to(".work-flex", {
+        x: -translateX,
+        ease: "none",
+      });
     });
 
     // Clean up
     return () => {
-      timeline.kill();
-      ScrollTrigger.getById("work")?.kill();
+      mm.revert();
     };
   }, []);
 

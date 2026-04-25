@@ -3,9 +3,13 @@
   max-width: var(--cMaxWidth);
   width: var(--cWidth);
   bottom: 0;
-  z-index: 99;
+  z-index: 9999; /* Increased z-index */
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none; /* Allow clicks to pass through if not on icon */
+}
+.icons-section * {
+  pointer-events: auto; /* Re-enable for children */
 }
 .social-icons {
   position: absolute;
@@ -92,15 +96,28 @@ div.resume-button span {
 }
 @media only screen and (max-width: 480px) {
   .resume-button {
-    bottom: 20px;
-    right: 10px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    transform: none; /* Remove rotation on mobile if it overlaps */
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    transform: none;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
     backdrop-filter: blur(5px);
+    z-index: 10000;
+  }
+  .social-icons {
+    left: 10px;
+    bottom: 15px;
+    gap: 10px;
+  }
+  .social-icons span {
+    width: 30px;
+    height: 30px;
+  }
+  .social-icons a {
+    font-size: 18px;
   }
 }
 
