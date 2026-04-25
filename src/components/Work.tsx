@@ -39,7 +39,7 @@ const projects = [
       "Shopping cart and checkout system",
       "Focus on UX and accessibility",
     ],
-    link: "https://github.com/mayank679",
+    link: "https://e-commerce-website-nu-orcin.vercel.app/",
   },
 ];
 
