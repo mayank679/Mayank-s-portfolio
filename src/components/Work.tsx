@@ -17,7 +17,7 @@ const projects = [
       "Pagination, sorting, analytics with JPQL & native SQL",
       "High test coverage with JUnit + Mockito",
     ],
-    link: "https://github.com/mayank679",
+    link: "https://github.com/mayank679/FilmRentalStore",
     image: "/images/film_rental.png",
   },
   {
